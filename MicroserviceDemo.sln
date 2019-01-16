@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceDemo", "MicroserviceDemo\MicroserviceDemo.csproj", "{E1B3196E-7B2C-46B9-90D3-F48E9E8A1835}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureService", "PictureService\PictureService.csproj", "{6B390F06-D3DC-402B-AD37-640C48582871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommentService", "CommentService\CommentService.csproj", "{6CD7AFBE-4806-42EB-93B3-E11A53C1D281}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{E1B3196E-7B2C-46B9-90D3-F48E9E8A1835}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1B3196E-7B2C-46B9-90D3-F48E9E8A1835}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1B3196E-7B2C-46B9-90D3-F48E9E8A1835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B390F06-D3DC-402B-AD37-640C48582871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B390F06-D3DC-402B-AD37-640C48582871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B390F06-D3DC-402B-AD37-640C48582871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B390F06-D3DC-402B-AD37-640C48582871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD7AFBE-4806-42EB-93B3-E11A53C1D281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD7AFBE-4806-42EB-93B3-E11A53C1D281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD7AFBE-4806-42EB-93B3-E11A53C1D281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD7AFBE-4806-42EB-93B3-E11A53C1D281}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
