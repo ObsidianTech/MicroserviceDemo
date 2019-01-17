@@ -42,7 +42,10 @@ namespace PictureService
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseCors(
-                options => options.WithOrigins("http://18.217.145.205:81/").AllowAnyMethod().AllowAnyHeader()
+                options => options.WithOrigins("http://18.217.145.205:81/")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowAnyOrigin()
                 );
             if (env.IsDevelopment())
             {
