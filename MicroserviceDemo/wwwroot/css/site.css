@@ -1,4 +1,10 @@
-﻿body {
+﻿html{
+    margin:0;
+    height:100%;
+    width:100%;
+}
+
+body {
     background: #FFFFFF;
     padding: 0;
     margin: 0;
@@ -6,9 +12,26 @@
     justify-content: center;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
+    max-height:100%;
 }
 
+.content{
+    padding:5%;
+    margin:10%;
+    border:5px solid red;
+}
 .pictureContainer {
     border: 3px dotted black;
-    margin: 5%;
+    max-height:55%;
+    width:auto;
+}
+
+.picture{
+    max-width:100%;
+}
+
+.footer{
+    max-height:50px;
+    bottom:0;
+    background-color:#000000;
 }
