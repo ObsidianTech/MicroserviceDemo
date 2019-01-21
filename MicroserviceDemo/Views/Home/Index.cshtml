@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using MicroserviceDemo.Models
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,6 +16,7 @@
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
     <script src="~/js/site.js" type="text/javascript"></script>
+    <script src="~/js/Modals.js" type="text/javascript"></script>
     <title>Document</title>
 </head>
 <body>
@@ -17,12 +24,43 @@
         <div class="headerslot">
             <p class="title" style="color:lightgrey">MicroDemo</p>
         </div>
-        <div class="headerslot">
-        </div>
-        <div class="headerslot">
-        </div>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <div class="headerslot">
+                <p>Welcome, @User.Identity.Name</p>
+            </div>
+            <div class="headerslot">
+                <button id="LogOutButton" class="IDButtons">Log Out</button>
+            </div>
+        }
+        else
+        {
+            <div class="headerslot">
+                <button id="SignUpButton" class="IDButtons">Sign Up</button>
+            </div>
+            <div class="headerslot">
+                <button id="LogInButton" class="IDButtons">Log In</button>
+            </div>
+        }
     </div>
     <div class="content">
+        <div id="LogInModal" class="LogInModal">
+            <form>
+                <input type="text" placeholder="Username" />
+                <input type="text" placeholder="Password"/>
+                <input type="submit" value="Log In"/>
+            </form>
+        </div>
+        <div id="SignUpModal" class="SignUpModal">
+            <form>
+                <input type="text" placeholder="Email"/>
+                <input type="text" placeholder="Username"/>
+                <input type="text" placeholder="Password"/>
+                <input type="submit" value="Sign Up"/>
+            </form>
+        </div>
+        <div class="footer">
+        </div>
         <div class="pictureContainer">
             <img id="Picture" src="" />
         </div>
@@ -41,8 +79,6 @@
             <input type="file" />
             <input type="text" />
         </form>*@
-    </div>
-    <div class="footer">
     </div>
 </body>
 </html>
